@@ -1,6 +1,6 @@
 class Banco:
-    _contas = []
-    def __int__(self):
+   # _contas = []
+    def __init__(self):
         self._contas = []
         self._caixa_geral = 0
 
@@ -24,3 +24,4 @@ class Banco:
 
     def imprime_caixa(self):
         print(f'Total de dinheiro no banco: {self._caixa_geral}')
+        print('--------------------------------')

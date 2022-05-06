@@ -9,12 +9,13 @@ class Conta:
     return Conta._total_contas
 
   #Caracteristicas
-  __slots__ = ['_numero', '_titular', '_saldo', '_senha','extrato']
-  def __init__(self, numero, cliente, saldo, senha):
+  __slots__ = ['_numero', '_titular', '_saldo', '_senha','extrato','_banco']
+  def __init__(self, numero, cliente, saldo, senha, banco=None):
     self._numero = numero
     self._titular = cliente
     self._saldo = saldo
     self._senha = senha
+    self._banco = banco
     self.extrato = Historico()
     Conta._total_contas += 1
 
